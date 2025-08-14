@@ -48,10 +48,7 @@ const appRoutes: Routes = [
       },
       
       // Default route
-      {
-        path: '',
-        loadChildren: () => import('./ecommerce/ecommerce.module').then((m) => m.EcommerceModule),
-      },
+      { path: '', redirectTo: '/listgroups', pathMatch: 'full' },
       
       // Redirect any other route to home
       { path: '**', redirectTo: '' },
